@@ -30,7 +30,7 @@ section {
 }
 
 // Biblioteca
-.b-h2 {
+.b-h2, .b-h3 {
     text-align: center;
     font-size: 2.5rem;
     margin-block: 2.6rem;
@@ -54,8 +54,36 @@ section {
 }
 
 // Ceramica
+.ceramic-h2, .ceramic-h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-block: 2.6rem;
+    margin-inline: 1.6rem;
+    text-decoration: underline;
+}
 
+.ceramic-logo-container {
+    text-align: center;
+    margin: 2rem;
+}
 
+.ceramic-logo {
+    width: 70vw;
+}
+
+.ceramic-p {
+    margin: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.ceramic-images-container {
+    margin-block: 3rem;
+}
+
+.ceramic-image {
+    width: 100vw;
+}
 
 // Radio
 
