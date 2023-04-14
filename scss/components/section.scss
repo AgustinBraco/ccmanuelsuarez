@@ -5,3 +5,25 @@ section {
     width: 100vw;
     background-color: var(--color-white);
 }
+
+// Index
+.banner-image {
+    width: 100vw;
+}
+
+.index-h2 {
+    text-align: center;
+    margin-inline: 2rem;
+    margin-block: 3rem;
+    font-size: 2.2rem;
+    text-decoration: underline;
+}
+
+.index-p-container {
+    margin: 2rem;
+}
+
+.p-index {
+    margin-block: 2rem;
+    font-size: 1.5rem;
+}

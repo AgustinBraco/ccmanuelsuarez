@@ -1,7 +1,49 @@
 @import '../base/mixin';
 
-// General
 footer {
     width: 100vw;
     background-color: var(--color-grey);
+    border-top: solid 2px var(--color-pblue);
+}
+
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    padding-top: 1.5rem;
+}
+
+.footer-names-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-names-container:active, .footer-names-container:focus, .footer-names-container:visited {
+    color: var(--color-black);
+}
+
+.footer-icon-container {
+    text-align: center;
+}
+
+.footer-job-name {
+    margin-top: -0.7rem;
+    font-size: 0.7rem;
+}
+
+.footer-person-name {
+    margin-inline: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-icon {
+    width: 2rem;
+}
+
+.footer-copyright-container {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 1rem;
 }

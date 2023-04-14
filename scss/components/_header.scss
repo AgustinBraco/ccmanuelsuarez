@@ -1,7 +1,25 @@
 @import '../base/mixin';
 
-// General
 header {
     width: 100vw;
     background-color: var(--color-white);
+    position: sticky;
+    top: 0;
+    border-bottom: solid 2px var(--color-pblue);
+}
+
+.header-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.logo-header {
+    width: 5.5rem;
+}
+
+.menu-mobile {
+    width: 4.5rem;
 }

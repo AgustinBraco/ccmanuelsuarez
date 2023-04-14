@@ -25,6 +25,25 @@ html {
 header {
   width: 100vw;
   background-color: var(--color-white);
+  position: sticky;
+  top: 0;
+  border-bottom: solid 2px var(--color-pblue);
+}
+
+.header-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.logo-header {
+  width: 5.5rem;
+}
+
+.menu-mobile {
+  width: 4.5rem;
 }
 
 section {
@@ -32,9 +51,73 @@ section {
   background-color: var(--color-white);
 }
 
+.banner-image {
+  width: 100vw;
+}
+
+.index-h2 {
+  text-align: center;
+  margin-inline: 2rem;
+  margin-block: 3rem;
+  font-size: 2.2rem;
+  text-decoration: underline;
+}
+
+.index-p-container {
+  margin: 2rem;
+}
+
+.p-index {
+  margin-block: 2rem;
+  font-size: 1.5rem;
+}
+
 footer {
   width: 100vw;
   background-color: var(--color-grey);
+  border-top: solid 2px var(--color-pblue);
+}
+
+.footer-links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  padding-top: 1.5rem;
+}
+
+.footer-names-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.footer-names-container:active, .footer-names-container:focus, .footer-names-container:visited {
+  color: var(--color-black);
+}
+
+.footer-icon-container {
+  text-align: center;
+}
+
+.footer-job-name {
+  margin-top: -0.7rem;
+  font-size: 0.7rem;
+}
+
+.footer-person-name {
+  margin-inline: 1rem;
+  font-size: 1.5rem;
+}
+
+.footer-icon {
+  width: 2rem;
+}
+
+.footer-copyright-container {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
