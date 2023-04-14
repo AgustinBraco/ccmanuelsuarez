@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/base/_general.scss","../scss/components/_header.scss","../scss/components/section.scss","../scss/components/_footer.scss"],"names":[],"mappings":"AAAA;AACQ;AAER;AACA;EACE;EACA;EACA;EACA;;;AAGF;AACA;EACE;;;AAGF;AACA;EACE;EACA;EACA;EACA;EACA;;;ACnBF;EACI;EACA;;;ACFJ;EACI;EACA;;;ACFJ;EACI;EACA","file":"style.css"}
