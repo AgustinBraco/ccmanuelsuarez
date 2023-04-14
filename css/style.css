@@ -74,6 +74,28 @@ section {
   font-size: 1.5rem;
 }
 
+.b-h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-block: 2.6rem;
+  text-decoration: underline;
+}
+
+.b-p {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-block: 3rem;
+  margin-inline: 1.5rem;
+}
+
+.b-images-container {
+  margin-block: 3rem;
+}
+
+.b-image {
+  width: 100vw;
+}
+
 footer {
   width: 100vw;
   background-color: var(--color-grey);
