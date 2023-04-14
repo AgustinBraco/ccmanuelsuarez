@@ -2,6 +2,7 @@
 
 footer {
     width: 100vw;
+    height: 8rem;
     background-color: var(--color-grey);
     border-top: solid 2px var(--color-pblue);
 }
@@ -10,8 +11,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem;
     padding-top: 1.5rem;
+    padding-inline: 1rem;
 }
 
 .footer-names-container {
@@ -46,5 +47,5 @@ footer {
 .footer-copyright-container {
     text-align: center;
     font-size: 0.8rem;
-    padding: 1rem;
+    padding-top: 1.2rem;
 }
