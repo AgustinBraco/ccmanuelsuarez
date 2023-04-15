@@ -35,10 +35,11 @@ header {
     right: 0;
     background-color: var(--color-grey);
     list-style: none;
-    gap: 2.5rem;
+    gap: 5rem;
     width: 100vw;
     height: 100vh;
     border-bottom: 3px solid var(--color-pblue);
+    border-top: 3px solid var(--color-pblue);
 }
 
 .open-navbar {
@@ -49,7 +50,6 @@ header {
     color: var(--color-pblue);
     font-size: 3rem;
     font-weight: 600;
-    width: 100vw;
 }
 
 .close-menu {
