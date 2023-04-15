@@ -17,8 +17,11 @@
     <meta property="og:url" content="https://www.centroculturalmanuelsuarez.org.ar">
     <meta property="og:image" content="https://github.com/AgustinBraco/ccmanuelsuarez/blob/master/assets/icons/logo.png">
 
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+    
 
     <title>Centro Cultural Manuel Suarez</title>
 </head>
@@ -31,7 +34,17 @@
             </div>
 
             <div>
-                <img src="./assets/icons/menu-mobile.png" alt="menu-mobile" class="menu-mobile">
+                <div>
+                    <img src="./assets/icons/menu-mobile.png" alt="menu-mobile" class="menu-mobile">
+                </div>
+
+                <ul class="nav-bar animate__animated animate__fadeIn">
+                    <li><a href="./pages/biblioteca.html" class="nav-var-link">BIBLIOTECA</a></li=>
+                    <li><a href="./pages/ceramica.html" class="nav-var-link">CERÁMICA</a></li>
+                    <li><a href="./pages/radio.html" class="nav-var-link">RADIO</a></li>
+                    <li><a href="./pages/contacto.html" class="nav-var-link">CONTACTO</a></li>
+                    <img src="./assets/icons/icon-close.png" alt="icon-close" class="close-menu">
+                </ul>
             </div>
         </div>
     </header>
@@ -84,6 +97,8 @@
             <p>No part of this site may be reproduced without our written permission.</p>
         </div>
     </footer>
+
+    <script src="./scipts.js"></script>
 </body>
 
 </html>

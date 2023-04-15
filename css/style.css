@@ -47,6 +47,40 @@ header {
   width: 4.5rem;
 }
 
+.nav-bar {
+  display: none;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-grey);
+  list-style: none;
+  gap: 2.5rem;
+  width: 100vw;
+  height: 45vh;
+  margin-top: -1rem;
+  border-bottom: 3px solid var(--color-pblue);
+  border-top: 3px solid var(--color-pblue);
+}
+
+.open-navbar {
+  display: flex;
+}
+
+.nav-var-link {
+  text-decoration: none;
+  color: var(--color-pblue);
+  font-size: 3rem;
+  font-weight: 600;
+  width: 100vw;
+}
+
+.close-menu {
+  width: 5rem;
+}
+
 section {
   width: 100vw;
   background-color: var(--color-white);

@@ -17,6 +17,8 @@
     <meta property="og:url" content="https://www.centroculturalmanuelsuarez.org.ar">
     <meta property="og:image" content="https://github.com/AgustinBraco/ccmanuelsuarez/blob/master/assets/icons/logo.png">
 
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
 
@@ -26,17 +28,24 @@
 <body>
     <header>
         <div class="header-container">
-
-            <div class="logo-container">
+            <div>
                 <a href="../index.html"><img src="../assets/icons/logo-mobile.png" alt="logo-mobile" class="logo-header"></a>
             </div>
 
-            <div class="menu-mobile-container">
-                <img src="../assets/icons/menu-mobile.png" alt="menu-mobile" class="menu-mobile">
-            </div>
+            <div>
+                <div>
+                    <img src="../assets/icons/menu-mobile.png" alt="menu-mobile" class="menu-mobile">
+                </div>
 
+                <ul class="nav-bar animate__animated animate__fadeIn">
+                    <li><a href="./biblioteca.html" class="nav-var-link">BIBLIOTECA</a></li=>
+                    <li><a href="./ceramica.html" class="nav-var-link">CERÁMICA</a></li>
+                    <li><a href="./radio.html" class="nav-var-link">RADIO</a></li>
+                    <li><a href="./contacto.html" class="nav-var-link">CONTACTO</a></li>
+                    <img src="../assets/icons/icon-close.png" alt="icon-close" class="close-menu">
+                </ul>
+            </div>
         </div>
-    </header>
     
     <main>
         <section>
@@ -48,11 +57,11 @@
             <div>
                 <form action="https://formsubmit.co/bracoagustin@gmail.com" method="POST" class="contact-form">
                     <!-- centroculturalmsuarez@gmail.com -->
+                    <input type="hidden" name="Asunto" value="Contacto web">
                     <input type="text" name="Nombre" placeholder="Nombre" class="form-name" minlength="3" maxlength="30">
                     <input type="text" name="Mail" placeholder="Mail" class="form-email" minlength="3" maxlength="30">
                     <input type="number" name="Celular" placeholder="Celular" class="form-phone">
-                    <textarea name="Mensaje" rows="3" placeholder="Mensaje" class="form-message"></textarea>
-                    <input type="hidden" name="Asunto" value="Contacto web">
+                    <textarea name="Mensaje" rows="3" placeholder="Mensaje" class="form-message" minlength="3" maxlength="100"></textarea>
                     <input type="hidden" name="_next" value="https://agustinbraco.github.io/ccmanuelsuarez/pages/contacto">
                     <input type="submit" value="ENVIAR" class="form-button">
                 </form>
@@ -101,6 +110,8 @@
             <p>No part of this site may be reproduced without our written permission.</p>
         </div>
     </footer>
+
+    <script src="../scipts.js"></script>
 </body>
 
 </html>
