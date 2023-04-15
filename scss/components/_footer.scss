@@ -2,49 +2,88 @@
 
 footer {
     width: 100vw;
-    height: 8.5rem;
+    padding-block: 1rem;
     background-color: var(--color-grey);
     border-top: solid 2px var(--color-pblue);
-}
 
-.footer-links-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1.5rem;
-    padding-inline: 1rem;
-}
+    .footer-links-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 1rem;
 
-.footer-names-container {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--color-black);
-}
+        @include responsive(md) {
+            padding-block: 1rem;
+            padding-inline: 3rem;
+        }
 
-.footer-names-container:active, .footer-names-container:focus, .footer-names-container:visited {
-    color: var(--color-black);
-}
+        @include responsive(lg) {
+            justify-content: space-around;
+        }
 
-.footer-icon-container {
-    text-align: center;
-}
+        .footer-names-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--color-black);
 
-.footer-job-name {
-    margin-top: -0.7rem;
-    font-size: 0.7rem;
-}
 
-.footer-person-name {
-    margin-inline: 1rem;
-    font-size: 1.5rem;
-}
+            @include responsive(lg) {
+                padding-block: 0.6rem;
+                padding-inline: 1.5rem;
+                border-radius: 3rem;
+                transition: ease all 0.7s;
 
-.footer-icon {
-    width: 2rem;
-}
+                &:hover {
+                    transform: scale(1.08);
+                    filter: invert(1);
+                    background-color: #d86e61;
+                }
+            }
 
-.footer-copyright-container {
-    text-align: center;
-    font-size: 0.8rem;
+            .footer-icon-container {
+                text-align: center;
+
+                .footer-icon {
+                    width: 2rem;
+
+                    @include responsive(md) {
+                        width: 3.2rem;
+                    }
+                }
+                
+                .footer-job-name {
+                    font-size: 0.7rem;
+
+                    @include responsive(md) {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            
+            .footer-person-name {
+                margin-inline: 1rem;
+                font-size: 1.5rem;
+
+                @include responsive(md) {
+                    margin-inline: 2rem;
+                    font-size: 2.5rem;
+                }
+            }
+
+            &:active, &:focus, &:visited {
+                color: var(--color-black);
+            }
+        }
+    }
+
+    .footer-copyright-container {
+        text-align: center;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+
+        @include responsive(md) {
+            font-size: 1.5rem;
+        }
+    }
 }

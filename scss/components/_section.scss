@@ -1,0 +1,482 @@
+@import '../base/mixin';
+
+section {
+    width: 100vw;
+    background-color: var(--color-white);
+    
+    // Index
+    .banner-image {
+        width: 100vw;
+
+        @include responsive(lg) {
+            height: 110vh;
+        }
+    }
+
+    .index-h2 {
+        text-align: center;
+        margin-inline: 2rem;
+        margin-block: 3rem;
+        font-size: 2.2rem;
+        text-decoration: underline;
+
+        @include responsive(md) {
+            font-size: 4.2rem;
+        }
+
+        @include responsive(lg) {
+            margin-block: 8rem;
+            font-size: 6rem;
+        }
+    }
+
+    .index-p-container {
+        margin: 2rem;
+        text-align: center;
+    
+        .p-index {
+            margin-block: 2rem;
+            font-size: 1.5rem;
+
+            @include responsive(md) {
+                margin-inline: 2.5rem;
+                font-size: 2.5rem;
+            }
+
+            @include responsive(lg) {
+                margin-inline: 40rem;
+                margin-block: 8rem;
+                font-size: 3rem;
+            }
+        }
+    }
+
+    // Biblioteca
+    .b-h2, .b-h3 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-block: 2.6rem;
+        margin-inline: 1.6rem;
+        text-decoration: underline;
+
+        @include responsive(md) {
+            font-size: 4.2rem;
+        }
+
+        @include responsive(lg) {
+            margin-block: 5rem;
+            font-size: 5rem;
+        }
+
+    }
+    
+    .b-p {
+        text-align: center;
+        font-size: 1.7rem;
+        margin-block: 3rem;
+        margin-inline: 1.5rem;
+        
+        @include responsive(md) {
+            font-size: 2.5rem;
+            margin-inline: 2.5rem;
+        }
+
+        @include responsive(lg) {
+            margin-inline: 40rem;
+            margin-block: 8rem;
+            font-size: 3rem;
+        }
+    }
+
+    .b-images-container {
+        margin-block: 3rem;
+
+        @include responsive(lg) {
+            display: flex;
+            overflow: hidden;
+            object-fit: cover;
+        }
+    
+        .b-image {
+            width: 100vw;
+
+            @include responsive(lg) {
+                width: 50vw;
+                filter: grayscale(1);
+                transition: all ease 1s;
+                height: 100%;
+
+                &:hover {
+                    filter: grayscale(0);
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    // Ceramica
+    .ceramic-h2, .ceramic-h3 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-block: 2.6rem;
+        margin-inline: 1.6rem;
+        text-decoration: underline;
+
+        @include responsive(md) {
+          font-size: 4.2rem;
+        }
+    }
+
+    .ceramic-logo-container {
+        text-align: center;
+        margin: 2rem;
+
+        @include responsive(md) {
+            margin: 5rem;  
+        }
+
+        .ceramic-logo {
+            width: 70vw;
+
+            @include responsive(lg) {
+                width: 20vw;
+            }
+        }
+    }
+
+    .ceramic-p {
+        margin: 2rem;
+        text-align: center;
+        font-size: 1.5rem;
+
+        @include responsive(md) {
+            margin: 3rem;
+            font-size: 2.5rem;
+        }
+
+        @include responsive(lg) {
+            margin-inline: 40rem;
+        }
+    }
+
+    .ceramic-images-container {
+        margin-block: 3rem;
+
+        @include responsive(lg) {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100vw;
+        }
+    
+        .ceramic-image-h {
+            width: 100vw;
+
+            @include responsive(lg) {
+                width: 50vw;
+                object-fit: cover;
+                height: 82rem;
+                filter: grayscale(1);
+                transition: all ease 0.8s;
+
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
+        }
+
+        .ceramic-image-v {
+            width: 100vw;
+
+            @include responsive(lg) {
+                margin-top: -0.5rem;
+                width: 25vw;
+                object-fit: cover;
+                height: 93rem;
+                filter: grayscale(1);
+                transition: all ease 0.8s;
+
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
+        }
+    }
+    
+    // Radio
+    .radio-h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-block: 2.6rem;
+        margin-inline: 1.6rem;
+        text-decoration: underline;
+
+        @include responsive(md) {
+            margin-block: 5rem;
+            font-size: 4.2rem;  
+        }
+    }
+
+    .radio-p {
+        margin: 2rem;
+        text-align: center;
+        font-size: 1.5rem;
+
+        @include responsive(md) {
+            margin-inline: 3.5rem;
+            font-size: 2.5rem;  
+        }
+
+        @include responsive(lg) {
+            margin-inline: 40rem;
+            margin-block: 8rem;
+        }
+    }
+
+    .radio-fb-container {
+        display: flex;
+        justify-content: space-around;
+        margin-inline: 3rem;
+        align-items: center;
+        text-align: center;
+
+        @include responsive(md) {
+            margin-inline: 6rem;
+        }
+
+        @include responsive(lg) {
+            margin-inline: 40rem;
+            margin-bottom: 5rem;
+        }
+    
+        .radio-fb {
+            margin-block: 3rem;
+
+            @include responsive(md) {
+                margin-block: 5rem;
+            }
+
+            @include responsive(lg) {
+                transition: ease all 0.5s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+    
+            .radio-fb-link {
+                text-decoration: none;
+                color: var(--color-pblue);
+            
+                .radio-fb-icon {
+                    width: 6rem;
+
+                    @include responsive(md) {
+                        width: 12rem;
+                    }
+                }
+                
+                .radio-fb-text {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    text-decoration: underline;
+
+                    @include responsive(md) {
+                        font-size: 3rem;
+                    }
+                }
+
+                &:active, &:focus, &:visited {
+                    color: var(--color-pblue);
+                }
+            }
+        }
+    }
+    
+    .radio-images-container {
+        margin-bottom: 3rem;
+
+        @include responsive(lg) {
+            display: flex;
+            flex-flow: row wrap;
+        }
+    
+        .radio-image {
+            width: 100vw;
+
+            @include responsive(lg) {
+                width: 50vw;
+                height: 82rem;
+                margin-top: -0.5rem;
+                filter: grayscale(1);
+                transition: ease all 0.8s;
+
+                &:hover {
+                    filter: grayscale(0); 
+                }
+            }
+        }
+    }
+
+    // Contacto
+    .contact-container {
+        margin-block: 2.5rem;
+
+        .contact-h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            text-decoration: underline;
+
+            @include responsive(md) {
+                font-size: 4.5rem;
+                margin-top: 7rem;
+            }
+        }
+
+        .contact-email {
+            color: var(--color-pblue);
+            text-align: center;
+            font-size: 1.3rem;
+
+            @include responsive(md) {
+                font-size: 2.2rem;
+                margin-block: 3rem;
+            }
+        }
+    }
+
+    .contact-form {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 80vw;
+        margin: auto;
+        gap: 2rem;
+
+        @include responsive(md) {
+            font-size: 2.2rem;
+            gap: 6rem;
+        }
+    
+        .form-name, .form-email, .form-phone, .form-message {
+            width: 100%;
+            text-align: center;
+            border: 0;
+            border-bottom: 2px solid var(--color-pblue);
+            color: var(--color-pblue);
+            border-radius: 1rem;
+            margin-block: 2rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+
+            @include responsive(md) {
+                font-size: 3rem;
+            }
+
+            &::placeholder {
+                color: var(--color-sblue);
+                font-size: 1.2rem;
+                font-weight: 400;
+
+                @include responsive(md) {
+                    font-size: 2.2rem;
+                }
+            }
+
+            &:active, &:focus {
+                outline: none;
+                border-bottom: 4px solid var(--color-pblue);
+            }
+        }
+        
+        .form-phone::-webkit-inner-spin-button {
+            display: none;
+        }
+        
+        .form-button {
+            width: 35%;
+            color: var(--color-white);
+            background-color: var(--color-pblue);
+            border-radius: 1rem;
+            border: 0;
+            font-size: 1.6rem;
+            margin: 1.5rem;
+            height: 3rem;
+
+            @include responsive(md) {
+                font-size: 3.5rem;
+                height: 5rem;
+            }
+
+            @include responsive(lg) {
+                height: 6rem;
+                width: 15%;
+                transition: ease all 0.5s;
+                background-color: var(--color-white);
+                color: var(--color-pblue);
+                border: solid 2px var(--color-pblue);
+
+                &:hover {
+                    background-color: var(--color-pblue);
+                    color: var(--color-white);
+                    transform: scale(0.90);
+                }
+            }
+        }
+    }
+
+    .contact-location-container {
+        margin: 4rem;
+
+        @include responsive(md) {
+            margin-top: 6rem;
+        }
+    
+        .contact-first-text {
+            color: var(--color-pblue);
+            font-weight: 500;
+            font-size: 2rem;
+            margin-block: 1rem;
+
+            @include responsive(md) {
+                font-size: 4rem;
+            }
+        }
+        
+        .contact-second-text {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+
+            @include responsive(md) {
+                font-size: 2.6rem;
+                margin-bottom: 6rem;
+            }
+        }
+    }
+    
+    .contact-map-container {
+        width: 100vw;
+        height: 30rem;
+        margin-bottom: 3rem;
+
+        @include responsive(md) {
+            height: 60rem;
+            margin-bottom: 6rem;
+        }
+
+        @include responsive(lg) {
+            height: 70rem;
+        }
+    
+        .contact-map {
+            filter: grayscale(1);
+            width: 100%;
+            transition: ease all 0.5s;
+
+            @include responsive(lg) {
+                &:hover {
+                    filter: grayscale(0);
+                }
+            }
+        }
+    }
+}
