@@ -40,26 +40,35 @@
     
     <main>
         <section>
-            <div>
-                <h2>CONTACTO</h2>
+            <div class="contact-container">
+                <h2 class="contact-h2">CONTACTO</h2>
+                <p class="contact-email">centroculturalmsuarez@gmail.com</p>
             </div>
 
             <div>
-                <div>
-                    <span>Mail:</span>
-                    <span>centroculturalmsuarez@gmail.com</span>
-                </div>
-
-                <div>
-                    <span>Ubicación:</span>
-                    <span>Av. Hipólito Yrigoyen 1625, Piñeyro, Buenos Aires</span>
-                </div>
+                <form action="https://formsubmit.co/bracoagustin@gmail.com" method="POST" class="contact-form">
+                    <!-- centroculturalmsuarez@gmail.com -->
+                    <input type="text" name="Nombre" placeholder="Nombre" class="form-name" minlength="3" maxlength="30">
+                    <input type="text" name="Mail" placeholder="Mail" class="form-email" minlength="3" maxlength="30">
+                    <input type="number" name="Celular" placeholder="Celular" class="form-phone">
+                    <textarea name="Mensaje" rows="3" placeholder="Mensaje" class="form-message"></textarea>
+                    <input type="hidden" name="Asunto" value="Contacto web">
+                    <input type="hidden" name="_next" value="https://agustinbraco.github.io/ccmanuelsuarez/pages/contacto">
+                    <input type="submit" value="ENVIAR" class="form-button">
+                </form>
             </div>
         </section> 
 
         <section>
             <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.1591657814224!2d-58.38538902331599!3d-34.67593216131724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcccb78c76cd05%3A0x1dc250b9176f90d0!2sCentro%20Cultural%20Manuel%20Suarez!5e0!3m2!1ses-419!2sar!4v1681433083089!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="contact-location-container">
+                    <p class="contact-first-text">Ubicación</p>
+                    <p class="contact-second-text">Av. Hipólito Yrigoyen 1625, Piñeyro, Buenos Aires</p>
+                </div>
+
+                <div class="contact-map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.1591657814224!2d-58.38538902331599!3d-34.67593216131724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcccb78c76cd05%3A0x1dc250b9176f90d0!2sCentro%20Cultural%20Manuel%20Suarez!5e0!3m2!1ses-419!2sar!4v1681433083089!5m2!1ses-419!2sar" style="border:0;" height="100%" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="contact-map"></iframe>
+                </div>
             </div>
         </section>
     </main>
