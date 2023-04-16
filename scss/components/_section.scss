@@ -352,6 +352,10 @@ section {
         margin: auto;
         gap: 2rem;
 
+        input:invalid, textarea:invalid {
+            border-color: red;
+        }
+
         @include responsive(md) {
             font-size: 2.2rem;
             gap: 6rem;
@@ -367,9 +371,11 @@ section {
             margin-block: 2rem;
             font-size: 1.6rem;
             font-weight: 600;
+            resize: vertical;
 
-            @include responsive(md) {
-                font-size: 3rem;
+            &:active, &:focus {
+                outline: none;
+                border-bottom: 4px solid var(--color-pblue);
             }
 
             &::placeholder {
@@ -382,9 +388,16 @@ section {
                 }
             }
 
-            &:active, &:focus {
-                outline: none;
-                border-bottom: 4px solid var(--color-pblue);
+            @include responsive(md) {
+                font-size: 3rem;
+
+                &:active, &:focus {
+                    border-bottom: 6px solid var(--color-pblue);
+                }
+            }
+
+            @include responsive(lg) {
+                width: 50%;
             }
         }
         
@@ -409,7 +422,7 @@ section {
 
             @include responsive(lg) {
                 height: 6rem;
-                width: 15%;
+                width: 12%;
                 transition: ease all 0.5s;
                 background-color: var(--color-white);
                 color: var(--color-pblue);

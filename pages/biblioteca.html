@@ -18,6 +18,8 @@
     <meta property="og:image" content="https://github.com/AgustinBraco/ccmanuelsuarez/blob/master/assets/icons/logo.png">
 
     <!-- Links -->
+    <link rel="stylesheet" href="photoswipe/dist/photoswipe.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
@@ -62,10 +64,20 @@
         </section>
 
         <section>
-            <div class="b-images-container">
-                <div><img src="../assets/images/bibloteca/bibloteca-raul-gonzalez-tunon-1.jpg" alt="foto-biblioteca-1" class="b-image"></div>
-                <div><img src="../assets/images/bibloteca/bibloteca-raul-gonzalez-tunon-2.jpg" alt="foto-biblioteca-2" class="b-image"></div>
+            <div class="pswp-gallery b-images-container" id="gallery--getting-started">
+                <a href="../assets/images/bibloteca/bibloteca-raul-gonzalez-tunon-1.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank">
+                    <img src="../assets/images/bibloteca/bibloteca-raul-gonzalez-tunon-1.jpg" alt="" class="b-image"/>
+                </a>
+                <a href="../assets/images/bibloteca/bibloteca-raul-gonzalez-tunon-2.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank">
+                    <img src="../assets/images/bibloteca/bibloteca-raul-gonzalez-tunon-2.jpg" alt="" class="b-image"/>
+                </a>
             </div>
+
+
+            <!-- <div class="b-images-container"> -->
+                <!-- <div><img src="../assets/images/bibloteca/bibloteca-raul-gonzalez-tunon-1.jpg" alt="foto-biblioteca-1" class="b-image"></div> -->
+                <!-- <div><img src="../assets/images/bibloteca/bibloteca-raul-gonzalez-tunon-2.jpg" alt="foto-biblioteca-2" class="b-image"></div> -->
+            <!-- </div> -->
         </section>
     </main>
 
@@ -98,7 +110,17 @@
         </div>
     </footer>
 
-    <script src="../scipts.js"></script>
+    <script type="module">
+        import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js';
+        const lightbox = new PhotoSwipeLightbox({
+          gallery: '#my-gallery',
+          children: 'a',
+          pswpModule: () => import('photoswipe/dist/photoswipe.esm.js')
+        });
+        lightbox.init();
+    </script>
+
+    <script src="../scripts.js"></script>
 </body>
 
 </html>
