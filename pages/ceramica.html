@@ -18,6 +18,7 @@
     <meta property="og:image" content="https://github.com/AgustinBraco/ccmanuelsuarez/blob/master/assets/icons/logo.png">
 
     <!-- Links -->
+    <link rel="stylesheet" href="photoswipe/dist/photoswipe.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
@@ -70,13 +71,13 @@
         </section>
 
         <section>
-            <div class="ceramic-images-container">
-                <div><img src="../assets/images/ceramica/apartado-ceramica-1.jpg" alt="foto-ceramica-1" class="ceramic-image-h"></div>
-                <div><img src="../assets/images/ceramica/apartado-ceramica-5.jpg" alt="foto-ceramica-5" class="ceramic-image-h"></div>
-                <div><img src="../assets/images/ceramica/apartado-ceramica-2.jpg" alt="foto-ceramica-2" class="ceramic-image-v"></div>
-                <div><img src="../assets/images/ceramica/apartado-ceramica-3.jpg" alt="foto-ceramica-3" class="ceramic-image-v"></div>
-                <div><img src="../assets/images/ceramica/apartado-ceramica-4.jpg" alt="foto-ceramica-4" class="ceramic-image-v"></div>
-                <div><img src="../assets/images/ceramica/cooperativa-de-ceramica-coopece.jpg" alt="foto-ceramica-6" class="ceramic-image-v"></div>
+            <div class="pswp-gallery b-images-container ceramic-images-container" id="gallery--getting-started">
+                <a href="../assets/images/ceramica/apartado-ceramica-1.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank"><img src="../assets/images/ceramica/apartado-ceramica-1.jpg" alt="foto-ceramica-1" class="ceramic-image-h"></a>
+                <a href="../assets/images/ceramica/apartado-ceramica-5.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank"><img src="../assets/images/ceramica/apartado-ceramica-5.jpg" alt="foto-ceramica-5" class="ceramic-image-h"></a>
+                <a href="../assets/images/ceramica/apartado-ceramica-2.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank"><img src="../assets/images/ceramica/apartado-ceramica-2.jpg" alt="foto-ceramica-2" class="ceramic-image-v"></a>
+                <a href="../assets/images/ceramica/apartado-ceramica-3.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank"><img src="../assets/images/ceramica/apartado-ceramica-3.jpg" alt="foto-ceramica-3" class="ceramic-image-v"></a>
+                <a href="../assets/images/ceramica/apartado-ceramica-4.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank"><img src="../assets/images/ceramica/apartado-ceramica-4.jpg" alt="foto-ceramica-4" class="ceramic-image-v"></a>
+                <a href="../assets/images/ceramica/cooperativa-de-ceramica-coopece.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank"><img src="../assets/images/ceramica/cooperativa-de-ceramica-coopece.jpg" alt="foto-ceramica-6" class="ceramic-image-v"></a>
             </div>
         </section>
     </main>
@@ -109,6 +110,16 @@
             <p>No part of this site may be reproduced without our written permission.</p>
         </div>
     </footer>
+
+    <script type="module">
+        import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js';
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#my-gallery',
+            children: 'a',
+            pswpModule: () => import('photoswipe/dist/photoswipe.esm.js')
+        });
+        lightbox.init();
+    </script>
     
     <script src="../scripts.js"></script>
 </body>

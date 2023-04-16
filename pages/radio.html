@@ -18,6 +18,7 @@
     <meta property="og:image" content="https://github.com/AgustinBraco/ccmanuelsuarez/blob/master/assets/icons/logo.png">
 
     <!-- Links -->
+    <link rel="stylesheet" href="photoswipe/dist/photoswipe.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
@@ -80,11 +81,11 @@
         </section>
             
         <section>
-            <div class="radio-images-container">
-                <div><img src="../assets/images/radio/fm-la-mosca-93-5-1.jpg" alt="foto-radio-1" class="radio-image"></div>
-                <div><img src="../assets/images/radio/fm-la-mosca-93-5-2.jpg" alt="foto-radio-2" class="radio-image"></div>
-                <div><img src="../assets/images/radio/fm-la-mosca-93-5-3.jpg" alt="foto-radio-3" class="radio-image"></div>
-                <div><img src="../assets/images/radio/fm-la-mosca-93-5-4.jpg" alt="foto-radio-4" class="radio-image"></div>
+            <div class="pswp-gallery radio-images-container" id="gallery--getting-started">
+                <a href="../assets/images/radio/fm-la-mosca-93-5-1.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank"><img src="../assets/images/radio/fm-la-mosca-93-5-1.jpg" alt="foto-radio-1" class="radio-image"></a>
+                <a href="../assets/images/radio/fm-la-mosca-93-5-2.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank"><img src="../assets/images/radio/fm-la-mosca-93-5-2.jpg" alt="foto-radio-2" class="radio-image"></a>
+                <a href="../assets/images/radio/fm-la-mosca-93-5-3.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank"><img src="../assets/images/radio/fm-la-mosca-93-5-3.jpg" alt="foto-radio-3" class="radio-image"></a>
+                <a href="../assets/images/radio/fm-la-mosca-93-5-4.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank"><img src="../assets/images/radio/fm-la-mosca-93-5-4.jpg" alt="foto-radio-4" class="radio-image"></a>
             </div>
         </section>
     </main>
@@ -117,6 +118,16 @@
             <p>No part of this site may be reproduced without our written permission.</p>
         </div>
     </footer>
+
+    <script type="module">
+        import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js';
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#my-gallery',
+            children: 'a',
+            pswpModule: () => import('photoswipe/dist/photoswipe.esm.js')
+        });
+        lightbox.init();
+    </script>
 
     <script src="../scripts.js"></script>
 </body>

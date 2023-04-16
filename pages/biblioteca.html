@@ -19,7 +19,6 @@
 
     <!-- Links -->
     <link rel="stylesheet" href="photoswipe/dist/photoswipe.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
@@ -72,12 +71,6 @@
                     <img src="../assets/images/bibloteca/bibloteca-raul-gonzalez-tunon-2.jpg" alt="" class="b-image"/>
                 </a>
             </div>
-
-
-            <!-- <div class="b-images-container"> -->
-                <!-- <div><img src="../assets/images/bibloteca/bibloteca-raul-gonzalez-tunon-1.jpg" alt="foto-biblioteca-1" class="b-image"></div> -->
-                <!-- <div><img src="../assets/images/bibloteca/bibloteca-raul-gonzalez-tunon-2.jpg" alt="foto-biblioteca-2" class="b-image"></div> -->
-            <!-- </div> -->
         </section>
     </main>
 
@@ -110,12 +103,13 @@
         </div>
     </footer>
 
+    
     <script type="module">
         import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm.js';
         const lightbox = new PhotoSwipeLightbox({
-          gallery: '#my-gallery',
-          children: 'a',
-          pswpModule: () => import('photoswipe/dist/photoswipe.esm.js')
+            gallery: '#my-gallery',
+            children: 'a',
+            pswpModule: () => import('photoswipe/dist/photoswipe.esm.js')
         });
         lightbox.init();
     </script>
