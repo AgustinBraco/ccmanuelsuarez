@@ -3,13 +3,23 @@
 section {
     width: 100vw;
     background-color: var(--color-white);
-    
-    // Index
-    .banner-image {
-        width: 100vw;
 
+    // Index
+    .parallax-container {
         @include responsive(lg) {
-            height: 110vh;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner-image {
+            width: 100vw;
+            @include responsive(lg) {
+                position: absolute;
+                height: 100vh;
+            }
         }
     }
 
