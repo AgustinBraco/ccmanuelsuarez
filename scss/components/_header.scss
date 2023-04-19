@@ -29,6 +29,7 @@ header {
 
         .logo-header-mobile {
             width: 5.5rem;
+            background-color: white;
 
             @include responsive(md) {
                 display: none;
@@ -38,6 +39,7 @@ header {
         .logo-header {
             display: none;
             width: 15.5rem;
+            background-color: white;
 
             @include responsive(md) {
                 display: flex;

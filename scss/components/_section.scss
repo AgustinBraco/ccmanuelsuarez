@@ -16,12 +16,31 @@ section {
 
         .banner-image {
             width: 100vw;
+
             @include responsive(lg) {
                 position: absolute;
-                height: 100vh;
+                height: 90vh;
             }
         }
     }
+
+        .scroll-arrow-container {
+            display: none;
+
+            @include responsive(lg) {
+                display: flex;
+                margin-top: -17rem;
+                position: absolute;
+                right: 48%;
+                
+                .scroll-arrow {
+                    width: 8rem;
+                    background-color: rgba(255, 255, 255, 0.317);
+                    border-radius: 10rem;
+                }
+            }
+        }
+
 
     .index-h2 {
         text-align: center;
@@ -35,28 +54,38 @@ section {
         }
 
         @include responsive(lg) {
-            margin-block: 8rem;
-            font-size: 6rem;
+            margin-block: 6rem;
+            font-size: 5rem;
         }
     }
 
     .index-p-container {
-        margin: 2rem;
-        text-align: center;
-    
+        margin-block: 3rem;
+        margin-inline: 5rem;
+
+        @include responsive(md) {
+            margin-block: 6rem;
+            margin-inline: 10rem;
+        }
+
+        @include responsive(lg) {
+            margin-block: 8rem;
+            margin-inline: 40rem;
+        }
+
         .p-index {
-            margin-block: 2rem;
+            margin-block: 3rem;
             font-size: 1.5rem;
+            text-align: justify;
 
             @include responsive(md) {
-                margin-inline: 2.5rem;
+                margin-block: 4rem;
                 font-size: 2.5rem;
             }
 
             @include responsive(lg) {
-                margin-inline: 40rem;
                 margin-block: 8rem;
-                font-size: 3rem;
+                font-size: 2.7rem;
             }
         }
     }
@@ -75,26 +104,27 @@ section {
 
         @include responsive(lg) {
             margin-block: 5rem;
-            font-size: 5rem;
+            font-size: 4.5rem;
         }
 
     }
     
     .b-p {
-        text-align: center;
+        text-align: justify;
         font-size: 1.7rem;
         margin-block: 3rem;
-        margin-inline: 1.5rem;
+        margin-inline: 5rem;
         
         @include responsive(md) {
-            font-size: 2.5rem;
-            margin-inline: 2.5rem;
+            font-size: 2rem;
+            margin-block: 5rem;
+            margin-inline: 8rem;
         }
 
         @include responsive(lg) {
             margin-inline: 40rem;
             margin-block: 8rem;
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
     }
 
@@ -139,10 +169,10 @@ section {
 
     .ceramic-logo-container {
         text-align: center;
-        margin: 2rem;
+        margin: 3rem;
 
         @include responsive(md) {
-            margin: 5rem;  
+            margin: 6rem;  
         }
 
         .ceramic-logo {
@@ -155,12 +185,14 @@ section {
     }
 
     .ceramic-p {
-        margin: 2rem;
-        text-align: center;
+        margin-block: 2rem;
+        margin-inline: 4rem;
+        text-align: justify;
         font-size: 1.5rem;
 
         @include responsive(md) {
-            margin: 3rem;
+            margin-block: 5rem;
+            margin-inline: 8rem;
             font-size: 2.5rem;
         }
 
@@ -184,7 +216,7 @@ section {
             @include responsive(lg) {
                 width: 50vw;
                 object-fit: cover;
-                height: 82rem;
+                height: 60rem;
                 filter: grayscale(1);
                 transition: all ease 0.8s;
 
@@ -201,7 +233,7 @@ section {
                 margin-top: -0.5rem;
                 width: 25vw;
                 object-fit: cover;
-                height: 93rem;
+                height: 70rem;
                 filter: grayscale(1);
                 transition: all ease 0.8s;
 
@@ -227,12 +259,14 @@ section {
     }
 
     .radio-p {
-        margin: 2rem;
-        text-align: center;
+        margin-block: 2rem;
+        margin-inline: 5rem;
+        text-align: justify;
         font-size: 1.5rem;
 
         @include responsive(md) {
-            margin-inline: 3.5rem;
+            margin-block: 4rem;
+            margin-inline: 8rem;
             font-size: 2.5rem;  
         }
 
@@ -315,7 +349,7 @@ section {
 
             @include responsive(lg) {
                 width: 50vw;
-                height: 82rem;
+                height: 70rem;
                 margin-top: -0.5rem;
                 filter: grayscale(1);
                 transition: ease all 0.8s;

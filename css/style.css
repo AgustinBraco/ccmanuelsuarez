@@ -1,6 +1,5 @@
 /* Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 /* Reset */
 * {
   margin: 0;
@@ -13,6 +12,7 @@
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* Colors */
@@ -55,6 +55,7 @@ header .header-container {
 }
 header .header-container .logo-header-mobile {
   width: 5.5rem;
+  background-color: white;
 }
 @media screen and (min-width: 750px) {
   header .header-container .logo-header-mobile {
@@ -64,6 +65,7 @@ header .header-container .logo-header-mobile {
 header .header-container .logo-header {
   display: none;
   width: 15.5rem;
+  background-color: white;
 }
 @media screen and (min-width: 750px) {
   header .header-container .logo-header {
@@ -218,7 +220,23 @@ section .parallax-container .banner-image {
 @media screen and (min-width: 1320px) {
   section .parallax-container .banner-image {
     position: absolute;
-    height: 100vh;
+    height: 90vh;
+  }
+}
+section .scroll-arrow-container {
+  display: none;
+}
+@media screen and (min-width: 1320px) {
+  section .scroll-arrow-container {
+    display: flex;
+    margin-top: -17rem;
+    position: absolute;
+    right: 48%;
+  }
+  section .scroll-arrow-container .scroll-arrow {
+    width: 8rem;
+    background-color: rgba(255, 255, 255, 0.317);
+    border-radius: 10rem;
   }
 }
 section .index-h2 {
@@ -235,29 +253,41 @@ section .index-h2 {
 }
 @media screen and (min-width: 1320px) {
   section .index-h2 {
-    margin-block: 8rem;
-    font-size: 6rem;
+    margin-block: 6rem;
+    font-size: 5rem;
   }
 }
 section .index-p-container {
-  margin: 2rem;
-  text-align: center;
+  margin-block: 3rem;
+  margin-inline: 5rem;
+}
+@media screen and (min-width: 750px) {
+  section .index-p-container {
+    margin-block: 6rem;
+    margin-inline: 10rem;
+  }
+}
+@media screen and (min-width: 1320px) {
+  section .index-p-container {
+    margin-block: 8rem;
+    margin-inline: 40rem;
+  }
 }
 section .index-p-container .p-index {
-  margin-block: 2rem;
+  margin-block: 3rem;
   font-size: 1.5rem;
+  text-align: justify;
 }
 @media screen and (min-width: 750px) {
   section .index-p-container .p-index {
-    margin-inline: 2.5rem;
+    margin-block: 4rem;
     font-size: 2.5rem;
   }
 }
 @media screen and (min-width: 1320px) {
   section .index-p-container .p-index {
-    margin-inline: 40rem;
     margin-block: 8rem;
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 }
 section .b-h2, section .b-h3 {
@@ -275,26 +305,27 @@ section .b-h2, section .b-h3 {
 @media screen and (min-width: 1320px) {
   section .b-h2, section .b-h3 {
     margin-block: 5rem;
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 }
 section .b-p {
-  text-align: center;
+  text-align: justify;
   font-size: 1.7rem;
   margin-block: 3rem;
-  margin-inline: 1.5rem;
+  margin-inline: 5rem;
 }
 @media screen and (min-width: 750px) {
   section .b-p {
-    font-size: 2.5rem;
-    margin-inline: 2.5rem;
+    font-size: 2rem;
+    margin-block: 5rem;
+    margin-inline: 8rem;
   }
 }
 @media screen and (min-width: 1320px) {
   section .b-p {
     margin-inline: 40rem;
     margin-block: 8rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 section .b-images-container {
@@ -336,11 +367,11 @@ section .ceramic-h2, section .ceramic-h3 {
 }
 section .ceramic-logo-container {
   text-align: center;
-  margin: 2rem;
+  margin: 3rem;
 }
 @media screen and (min-width: 750px) {
   section .ceramic-logo-container {
-    margin: 5rem;
+    margin: 6rem;
   }
 }
 section .ceramic-logo-container .ceramic-logo {
@@ -352,13 +383,15 @@ section .ceramic-logo-container .ceramic-logo {
   }
 }
 section .ceramic-p {
-  margin: 2rem;
-  text-align: center;
+  margin-block: 2rem;
+  margin-inline: 4rem;
+  text-align: justify;
   font-size: 1.5rem;
 }
 @media screen and (min-width: 750px) {
   section .ceramic-p {
-    margin: 3rem;
+    margin-block: 5rem;
+    margin-inline: 8rem;
     font-size: 2.5rem;
   }
 }
@@ -384,7 +417,7 @@ section .ceramic-images-container .ceramic-image-h {
   section .ceramic-images-container .ceramic-image-h {
     width: 50vw;
     object-fit: cover;
-    height: 82rem;
+    height: 60rem;
     filter: grayscale(1);
     transition: all ease 0.8s;
   }
@@ -400,7 +433,7 @@ section .ceramic-images-container .ceramic-image-v {
     margin-top: -0.5rem;
     width: 25vw;
     object-fit: cover;
-    height: 93rem;
+    height: 70rem;
     filter: grayscale(1);
     transition: all ease 0.8s;
   }
@@ -422,13 +455,15 @@ section .radio-h2 {
   }
 }
 section .radio-p {
-  margin: 2rem;
-  text-align: center;
+  margin-block: 2rem;
+  margin-inline: 5rem;
+  text-align: justify;
   font-size: 1.5rem;
 }
 @media screen and (min-width: 750px) {
   section .radio-p {
-    margin-inline: 3.5rem;
+    margin-block: 4rem;
+    margin-inline: 8rem;
     font-size: 2.5rem;
   }
 }
@@ -512,7 +547,7 @@ section .radio-images-container .radio-image {
 @media screen and (min-width: 1320px) {
   section .radio-images-container .radio-image {
     width: 50vw;
-    height: 82rem;
+    height: 70rem;
     margin-top: -0.5rem;
     filter: grayscale(1);
     transition: ease all 0.8s;
@@ -696,7 +731,7 @@ footer {
   background-color: var(--color-grey);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='244' height='244' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%2327919E' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%231D6D77'%3E%3Ccircle cx='769' cy='229' r='6'/%3E%3Ccircle cx='539' cy='269' r='6'/%3E%3Ccircle cx='603' cy='493' r='6'/%3E%3Ccircle cx='731' cy='737' r='6'/%3E%3Ccircle cx='520' cy='660' r='6'/%3E%3Ccircle cx='309' cy='538' r='6'/%3E%3Ccircle cx='295' cy='764' r='6'/%3E%3Ccircle cx='40' cy='599' r='6'/%3E%3Ccircle cx='102' cy='382' r='6'/%3E%3Ccircle cx='127' cy='80' r='6'/%3E%3Ccircle cx='370' cy='105' r='6'/%3E%3Ccircle cx='578' cy='42' r='6'/%3E%3Ccircle cx='237' cy='261' r='6'/%3E%3Ccircle cx='390' cy='382' r='6'/%3E%3C/g%3E%3C/svg%3E");
   width: 100vw;
-  padding-block: 1rem;
+  padding-top: 0.5rem;
   border-top: solid 2px var(--color-pblue);
 }
 footer .footer-links-container {
@@ -707,8 +742,7 @@ footer .footer-links-container {
 }
 @media screen and (min-width: 750px) {
   footer .footer-links-container {
-    padding-block: 1rem;
-    padding-inline: 3rem;
+    padding-inline: 2rem;
   }
 }
 @media screen and (min-width: 1320px) {
@@ -724,10 +758,9 @@ footer .footer-links-container .footer-names-container {
 }
 @media screen and (min-width: 1320px) {
   footer .footer-links-container .footer-names-container {
-    padding-block: 0.6rem;
-    padding-inline: 1.5rem;
-    border-radius: 3rem;
-    transition: ease all 0.7s;
+    padding-inline: 1.1rem;
+    border-radius: 2rem;
+    transition: ease all 0.6s;
   }
   footer .footer-links-container .footer-names-container:hover {
     transform: scale(1.08);
@@ -739,29 +772,30 @@ footer .footer-links-container .footer-names-container .footer-icon-container {
   text-align: center;
 }
 footer .footer-links-container .footer-names-container .footer-icon-container .footer-icon {
-  width: 2rem;
+  width: 1.5rem;
 }
 @media screen and (min-width: 750px) {
   footer .footer-links-container .footer-names-container .footer-icon-container .footer-icon {
-    width: 3.2rem;
+    width: 3rem;
   }
 }
 footer .footer-links-container .footer-names-container .footer-icon-container .footer-job-name {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
+  margin-top: -0.5rem;
 }
 @media screen and (min-width: 750px) {
   footer .footer-links-container .footer-names-container .footer-icon-container .footer-job-name {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 footer .footer-links-container .footer-names-container .footer-person-name {
   margin-inline: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 @media screen and (min-width: 750px) {
   footer .footer-links-container .footer-names-container .footer-person-name {
-    margin-inline: 2rem;
-    font-size: 2.5rem;
+    margin-block: 1rem;
+    font-size: 2rem;
   }
 }
 footer .footer-links-container .footer-names-container:active, footer .footer-links-container .footer-names-container:focus, footer .footer-links-container .footer-names-container:visited {
@@ -770,7 +804,7 @@ footer .footer-links-container .footer-names-container:active, footer .footer-li
 footer .footer-copyright-container {
   text-align: center;
   font-size: 0.8rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 @media screen and (min-width: 750px) {
   footer .footer-copyright-container {
