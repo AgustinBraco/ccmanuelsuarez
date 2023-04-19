@@ -361,6 +361,26 @@ section {
         }
     }
 
+    // Stream
+    .stream-container {
+        height: 50vh;
+        background-color: grey;
+        margin-bottom: 4rem;
+        margin-inline: 1rem;
+
+        @include responsive(md) {
+            height: 60vh;
+            margin-bottom: 5rem;
+            margin-inline: 2rem;
+        }
+
+        @include responsive(lg) {
+            height: 80vh;
+            margin-bottom: 8rem;
+            margin-inline: 3rem;
+        }
+    }
+
     // Contacto
     .contact-container {
         margin-block: 2.5rem;
