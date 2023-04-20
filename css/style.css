@@ -559,23 +559,11 @@ section .radio-images-container .radio-image {
 section .stream-container {
   margin: auto;
   width: 90vw;
-  height: 50vh;
   padding-top: 2rem;
 }
-@media screen and (min-width: 750px) {
-  section .stream-container {
-    height: 60vh;
-  }
-}
-@media screen and (min-width: 1320px) {
-  section .stream-container {
-    margin-top: 4rem;
-  }
-}
 section .stream-container .stream {
-  width: 100%;
-  height: 100%;
-  background-color: grey;
+  background-color: var(--color-grey);
+  border-radius: 5rem;
 }
 section .contact-container {
   margin-block: 2.5rem;
