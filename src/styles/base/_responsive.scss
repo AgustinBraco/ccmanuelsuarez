@@ -1,0 +1,29 @@
+$breakpoints: (
+	//breakpoints Lucas:
+	mobile-m: 400px,
+	mobile-l: 450px,
+	tablet-s: 550px,
+	//breakpoints Agus:
+	tablet: 840px, 
+	laptop: 1000px,
+	desktop: 1240px,
+);
+
+$breakpointsHeight: (
+	small: 600px,
+	medium: 800px,
+	large: 1000px,
+);
+
+// Resposive function
+@mixin responsive($breakpoint) {
+	@media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+		@content;
+	}
+}
+
+@mixin responsiveHeight($breakpointHeight) {
+	@media screen and (min-height: map-get($breakpointsHeight, $breakpointHeight)) {
+		@content;
+	}
+}

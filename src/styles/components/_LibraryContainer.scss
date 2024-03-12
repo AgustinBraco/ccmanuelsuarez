@@ -1,0 +1,141 @@
+.libraryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 12px 40px;
+
+    @include responsive(mobile-m) {
+        padding: 12px 50px;
+    }
+
+
+    @include responsive(tablet-s) {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+
+    .libraryTextWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin-bottom: 25px;
+        width: 80%;
+        .libraryTitle  {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+                text-align: center;
+                font-size: 2rem;
+                font-weight: 600;
+                @include responsive(tablet-s) {
+                    font-size: 2.5rem;
+                    width: 85%;
+                }
+
+                @include responsive(laptop) {
+                    font-size: 3.2rem;
+                }
+
+                @include responsive(laptop) {
+                    font-size: 3.2rem;
+                }
+                @include responsive(desktop) {
+                    font-size: 4rem;
+                }
+            }
+        }
+        .libraryText {
+            font-size: 1rem;
+            width: 100%;
+            @media screen and (max-width: 350px) {
+                font-size: 0.8rem;
+            }
+
+            @media screen and (min-width: 350px) {
+                font-size: 1rem;
+            }
+
+            @include responsive(mobile-m) {
+                font-size: 1rem;
+            }
+
+            @include responsive(tablet-s) {
+                width: 35%;
+                font-size: 1.2rem;
+                margin-top: 50px;
+            }
+
+            @include responsive(laptop) {
+                font-size: 1.4rem;
+            }
+
+            @include responsive(desktop) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .libraryImgsWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+
+            @include responsive(mobile-m) {
+                width: 90%;
+            }
+           
+            @include responsive(laptop) {
+                width: 500px;
+                height: 300px;
+            }
+        }
+
+        .library-img-1{
+            @include responsive(tablet-s) {
+                position: relative;
+                width: 95%;
+                height: 200px;
+                right: -19%;
+                top: 0;
+            }
+            @include responsive(laptop) {
+                height: 300px;
+            }
+            @include responsive(desktop) {
+                width: 90%;
+                height: 320px;
+            }
+        }
+
+        .library-img-2 {
+            @include responsive(tablet-s) {
+               position: relative;
+               right: -21%;
+               width: 220px;
+               height: 120px;
+            }
+
+            @include responsive(laptop) {
+                width: 300px;
+                height: 155px;
+            }
+            @include responsive(desktop) {
+                width: 350px;
+                height: 200px;
+            }
+        }
+    }
+}

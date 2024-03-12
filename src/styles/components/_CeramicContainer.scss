@@ -1,0 +1,76 @@
+.ceramicContainer {
+    display: flex;
+    flex-direction: column;
+
+    .ceramicTitleWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        background-color: $whitegrey;
+        height: 200px;
+        p {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        img {
+            width: 87px;
+            border-radius: 10px;
+        }
+    }
+
+    .ceramicTextWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 75px;
+        padding: 25px 12px;
+
+        .ceramicText {
+            font-size: 0.8rem;
+            width: 70%;
+            position: relative; 
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+
+    .ceramicTextWrapper div:nth-child(1) {
+        align-self: flex-start;
+    }
+
+    //Forma superior derecha
+    .ceramicTextWrapper div:nth-child(1)::before {
+        content: "";
+        width: 85px;
+        height: 85px;
+
+        background: linear-gradient(112deg, #5077FF 26.93%, rgba(80, 119, 255, 0.15) 100.53%);   
+        filter: blur(60px);
+        transform: rotate(169.905deg);
+        border-radius: 100%;
+
+        position: absolute;
+        right: -75%; //62
+    }
+
+    .ceramicTextWrapper div:nth-child(2) {
+        align-self: flex-end;
+    }
+
+    // Forma inferior izquierda
+    .ceramicTextWrapper div:nth-child(2)::before {
+        content: "";
+        width: 85px;
+        height: 85px;
+
+        background: linear-gradient(112deg, #5077FF 26.93%, rgba(80, 119, 255, 0.15) 100.53%);   
+        filter: blur(60px);
+        transform: rotate(169.905deg);
+        border-radius: 100%;
+
+        position: absolute;
+        left: -75%; //62
+    }
+
+}

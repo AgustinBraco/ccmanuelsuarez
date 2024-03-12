@@ -1,0 +1,25 @@
+.homeCircle {
+	background: radial-gradient(circle at center, rgba(80, 118, 255, 0.469) 0%, rgba(66, 101, 251, 0) 70%);
+	width: 25rem; // 40
+	height: 25rem; // 40
+	position: absolute;
+	bottom: -18px;
+	left: -25px;
+	transform: translate(-40%, 40%);
+	z-index: 9999;
+
+	@include responsive(tablet-s) {
+		bottom: -145px;
+	}
+
+	@include responsive(laptop) {
+		bottom: -45px;
+	}
+	@include responsiveHeight(large) {
+		bottom: -100px;
+	}
+
+	@include responsive(desktop) {
+		bottom: -25px;
+	}
+}

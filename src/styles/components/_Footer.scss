@@ -1,0 +1,89 @@
+.footerContainer {
+	display: flex;
+	width: 100%;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	padding: 0 25px;
+
+	@include responsive(desktop) {
+	
+	}
+	
+
+	.hrFirst {
+		width: 85%;
+		height: 0.2rem;
+		background-color: $dark;
+		border-style: solid;
+		border-radius: 1rem;
+		opacity: 0.1;
+	}
+
+	.footerTop {
+		width: 100%;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+
+		padding: 1.5rem 0;
+
+		.footerInfo {
+			width: 40%;
+			display: flex;
+			flex-flow: column nowrap;
+			gap: 1.5rem;
+			font-size: 1rem;
+			
+			text-align: end;
+		}
+
+	
+		.logoContainer p {
+			font-size: 1.2rem;
+		}
+	}
+
+	.hrSecond {
+		width: 85%; //61%
+		height: 0.3rem;
+		background-color: $lightblue;
+		border-style: solid $lightblue;
+		border-radius: 1rem;
+		opacity: 0.2;
+	}
+
+	.footerBottom {
+		width: 100%;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		padding: 1.5rem 0;
+
+		.footerTexts {
+			text-align: center;
+			font-size: 0.9rem;
+		}
+
+		.footerCopyright {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.footerCopyright p{
+			width: 80%;
+		}
+
+		.footerLink {
+			text-decoration: none;
+			font-size: 1rem;
+			color: $black;
+		}
+
+		.textEnd {
+			text-align: end;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+.infoContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	font-weight: 600;
+}
+
+.infoIcon {
+  color: $lightblue;
+	font-size: 1.2rem;
+	margin-right: 5px;
+}

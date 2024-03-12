@@ -1,0 +1,122 @@
+.historyContainer {
+    min-height: 60vh;
+    padding: 85px 18px; //pc 25px
+    overflow-x: hidden;
+
+    @include responsive(desktop) {
+        margin-top: 170px;
+    }
+
+
+    .historyWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .historyText {
+            width: 100%;
+            font-size: 1.2rem; //pc 1.8
+            padding: 0 5px;
+            align-self: center;
+
+            @media screen and (max-width: 350px) {
+                font-size: 0.8rem;
+            }
+
+            @media screen and (min-width: 350px) {
+                padding: 0 8px;
+                font-size: 1rem;
+            }
+
+            @include responsive(mobile-m) {
+                padding: 0 12px;
+                font-size: 1rem;
+            }
+
+            @include responsive(tablet-s) {
+                width: 85%;
+                padding: 0 45px;
+                font-size: 1.2rem;
+                
+            }
+
+            @include responsive(laptop) {
+                width: 75%;
+                padding: 0 65px;
+                font-size: 1.4rem;
+            }
+
+            @include responsive(desktop) {
+                width: 68%;
+                padding: 0 80px;
+                font-size: 1.6rem;
+            }
+        }
+
+
+        .historySection {
+            display: flex;
+            align-items: flex-start; // center ¿
+
+            img {
+                width: 57%;
+                height: 250px; //320
+                position: relative;
+
+                @include responsive(tablet) {
+                    height: 320px;
+                }
+                @include responsive(desktop) {
+                    width: 65%;
+                    height: 420px;
+                }
+            }
+        }
+
+        //Secciones arriba y abajo:
+
+        .historyUpSection {
+            .hsUpTextWrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                .historyTitle {
+                    font-size: 1.8rem; //3.2 pc
+                    font-weight: 600;
+                    margin-bottom: 12px;
+
+                    @media screen and (max-width: 350px) {
+                        font-size: 2rem;
+                        text-align: center;
+                    }
+
+
+                    @include responsive(tablet-s) {
+                        font-size: 2.5rem;
+                    }
+
+                    @include responsive(laptop) {
+                        font-size: 3.2rem;
+                    }
+
+                    @include responsive(desktop) {
+                        font-size: 4rem;
+                        margin-right: 8px;
+                    }
+                }
+            }
+            img {
+                right: -30px;
+                border-radius: 25px 0 0 25px; //25px
+            }
+        }
+
+        .historyDownSection {
+                img {
+                left: -30px;
+                border-radius: 0px 25px 25px 0; //25px
+            }
+        }
+    }
+}
